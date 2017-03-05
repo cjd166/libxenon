@@ -17,12 +17,10 @@ LIBPNG=libpng-1.5.10
 BZIP2=bzip2-1.0.6
 FREETYPE=freetype-2.4.9
 
-BUILD_BINUTILS=false
-BUILD_GCC=false
+BUILD_BINUTILS=true
+BUILD_GCC=true
 BUILD_NEWLIB=true
-BUILD_GCC_SECOND=false
-
-#FSBRANCH=Swizzy
+BUILD_GCC_SECOND=true
 
 # path to the logfile
 LOGFILE="`pwd`/build.log"
