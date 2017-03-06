@@ -306,12 +306,13 @@ function filesystems_install
 		gmake -C $i install >> $LOGFILE 2>&1 || exit 0
 		echo -e "Done"
 				else
-				cd $i
-				echo -e -n "Building... "
-		gmake xtaf >> $LOGFILE 2>&1 || exit 0
-		echo -e -n "Installing... "
-		gmake xtaf install >> $LOGFILE 2>&1 || exit 0
-		echo -e "Done"
+			cd $i
+			sed -i.bak s/@make/@gmake/g configure				
+			echo -e -n "Building... "
+			gmake >> $LOGFILE 2>&1 || exit 0
+			echo -e -n "Installing... "
+			gmake install >> $LOGFILE 2>&1 || exit 0
+			echo -e "Done"
 				fi
 				
 				
