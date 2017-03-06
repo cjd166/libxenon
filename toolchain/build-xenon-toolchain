@@ -307,7 +307,7 @@ function filesystems_install
 		echo -e "Done"
 				else
 			cd $i
-			sed -i.bak s/@make/@gmake/g configure				
+			sed -i.bak s/@make/@gmake/g Makefile				
 			echo -e -n "Building... "
 			gmake >> $LOGFILE 2>&1 || exit 0
 			echo -e -n "Installing... "
